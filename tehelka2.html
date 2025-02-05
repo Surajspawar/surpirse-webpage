@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine? 💖</title>
+    <style>
+        body {
+            background-color: #f0aae4;
+            color: #222;
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff69b4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .heart {
+            font-size: 6em;
+            color: #f1e8ed;
+            animation: heartbeat 2.5s infinite alternate;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .yes-btn {
+            background-color: #ff1493;
+            color: white;
+        }
+
+        .yes-btn:hover {
+            background-color: #ff69b4;
+        }
+
+        .no-btn {
+            background-color: #8b0000;
+            color: white;
+        }
+
+        .no-btn:hover {
+            background-color: #b22222;
+        }
+
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dear my Kinder Joy?🧿</h1>
+    <div class="heart">💖</div>
+    <p>I want to spend my forever with you. Will you be mine?</p>
+
+    <button class="yes-btn" id="yesBtn">YES! 💍</button>
+    <button class="no-btn" id="noBtn">NO ❌</button>
+
+    <p class="message" id="responseMessage"></p>
+
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const responseMessage = document.getElementById("responseMessage");
+
+        yesBtn.addEventListener("click", () => {
+            responseMessage.textContent = "You said YES! 💍🪬 Ab toh zindagi sukoon se gujregi😁!";
+            responseMessage.style.color = "green";
+        });
+
+        noBtn.addEventListener("click", () => {
+            responseMessage.textContent = "You don't have a choice! You have to spend further life with me!😁❤️";
+            responseMessage.style.color = "red";
+        });
+    </script>
+
+</body>
+</html>
