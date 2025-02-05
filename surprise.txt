@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .surprise-container {
+            margin-top: 100px;
+            padding: 50px;
+            background-color: #ffeb3b;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            color: #333;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .celebrate {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #ff5722;
+        }
+        .surprise-container i {
+            color: #ff5722;
+            font-size: 50px;
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="surprise-container">
+    <h1>🎉 Surprise! 🎉</h1>
+    <p>You've unlocked something special!</p>
+    <p class="celebrate">Let's Celebrate! 🎊</p>
+    <i class="fas fa-gift"></i>
+</div>
+
+<!-- Confetti.js Library for Celebration Effect -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<script>
+    // Trigger confetti animation on page load
+    window.onload = function() {
+        confetti({
+            particleCount: 200,
+            spread: 60,
+            origin: { y: 0.6 }
+        });
+    }
+</script>
+
+</body>
+</html>
