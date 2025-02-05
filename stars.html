@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Starry Proposal 🌌</title>
+    <style>
+        body {
+            background-image: url('https://example.com/starry-background.jpg'); /* Link to your background image */
+            background-size: cover; /* This ensures the background image covers the entire screen */
+            background-position: center; /* Centers the image */
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 50px;
+            height: 100vh; /* Full height */
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ffcc00;
+            animation: fadeIn 3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .starry-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hands.jpeg'); /* Add your image link */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+        }
+
+        .message {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #ffcc00;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.5em;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            background-color: #ffcc00;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+
+        #responseMessage {
+            font-size: 1.5em;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="starry-background"></div>
+
+    <h1>My Love, Will You Marry Me?</h1>
+    <p class="message">Under the stars, I want to ask you the most important question.</p>
+
+    <button id="yesBtn">YES! 💍</button>
+    <button id="noBtn">NO ❌</button>
+
+    <p id="responseMessage"></p>
+
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const responseMessage = document.getElementById("responseMessage");
+
+        yesBtn.addEventListener("click", function() {
+            responseMessage.textContent = "You said YES! 💍 I love you forever!";
+            responseMessage.style.color = "#00ff00"; // Green for YES
+        });
+
+        noBtn.addEventListener("click", function() {
+            responseMessage.textContent = "You have no option! 😄";
+            responseMessage.style.color = "#ff0000"; // Red for NO
+        });
+    </script>
+
+</body>
+</html>
